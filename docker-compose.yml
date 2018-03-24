@@ -7,4 +7,5 @@ services:
       - 8080:8080
     volumes:
       - /usr/bin/docker:/usr/bin/docker:ro
+      - /var/lib/docker/:/var/lib/docker
       - /var/run/docker.sock:/var/run/docker.sock
