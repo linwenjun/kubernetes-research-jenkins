@@ -1,7 +1,7 @@
 version: '3'
 services:
   jenkins-master:
-    # image: jenkins:2.60.3-alpine
+    image: harbor.thoughtworks-school.com/library/jenkins:2.60.3-alpine
     build: .
     ports:
       - 8080:8080
