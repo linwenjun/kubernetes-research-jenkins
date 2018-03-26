@@ -23,16 +23,11 @@ spec:
         volumeMounts:
           - mountPath: /var/jenkins_home
             name: jenkins
-        volumes:
-        - name: jenkins
-          # This AWS EBS volume must already exist.
-          awsElasticBlockStore:
-            volumeID: vol-0a67738b2efef727b
-            fsType: ext4
       volumes:
       - name: jenkins
-        persistentVolumeClaim:
-          claimName: aws-jenkins-pvc
+        awsElasticBlockStore:
+          volumeID: vol-0a67738b2efef727b
+          fsType: ext4
 ---
 kind: Service
 apiVersion: v1
