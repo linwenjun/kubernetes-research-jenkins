@@ -1,0 +1,14 @@
+apiVersion: "v1"
+kind: "PersistentVolume"
+metadata:
+  name: "aws-pv" 
+  labels:
+    type: amazonEBS
+spec:
+  capacity:
+    storage: "100Gi" 
+  accessModes:
+    - ReadWriteOnce
+  awsElasticBlockStore: 
+    fsType: "ext4" 
+    volumeID: "vol-01e75004a3a8a60ef"
